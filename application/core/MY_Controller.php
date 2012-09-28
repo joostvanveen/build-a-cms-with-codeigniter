@@ -6,5 +6,6 @@ class MY_Controller extends CI_Controller {
 			parent::__construct();
 			$this->data['errors'] = array();
 			$this->data['site_name'] = config_item('site_name');
+			$this->data['subview'] = 'You forgot to set a subview';
 		}
 }

@@ -10,13 +10,10 @@ class Migration extends Admin_Controller
 	public function index ()
 	{
 		$this->load->library('migration');
-		if (! $this->migration->current()) {
-			show_error($this->migration->error_string());
-		}
-		else {
-			echo 'Migration worked!';
-		}
+		$this->migration->current();
 	
+		$this->data['subview'] = 'admin/migration/index';
+		$this->load->view('admin/_layout_main', $this->data);
 	}
 
 }
