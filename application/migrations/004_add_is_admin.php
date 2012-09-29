@@ -16,6 +16,6 @@ class Migration_Add_is_admin extends CI_Migration
 
 	public function down ()
 	{
-		$this->dbforge->drop_column('users', $fields);
+		$this->dbforge->drop_column('users', 'is_Admin');
 	}
 }
