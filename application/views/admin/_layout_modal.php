@@ -3,10 +3,9 @@
 <body style="background: #555;">
 
 	<div class="modal show" role="dialog">
-		<div class="modal-header">
-			<h3>Log in</h3>
-		</div>
-		<div class="modal-body"></div>
+		
+<?php $this->load->view($subview); // Subview is set in controller ?>
+
 		<div class="modal-footer">
 			&copy; <?php echo date('Y'); ?> <?php echo $meta_title; ?>
 		</div>
