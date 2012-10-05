@@ -15,9 +15,7 @@
 		<div class="row">
 			<!-- Main column -->
 			<div class="span9">
-				<section>
-					<h2>Page name</h2>
-				</section>
+<?php $this->load->view($subview); ?>
 			</div>
 			<!-- Sidebar -->
 			<div class="span3">

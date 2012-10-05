@@ -12,6 +12,14 @@ class MY_Model extends CI_Model {
 		parent::__construct();
 	}
 	
+	public function array_from_post($fields){
+		$data = array();
+		foreach ($fields as $field) {
+			$data[$field] = $this->input->post($field);
+		}
+		return $data;
+	}
+	
 	public function get($id = NULL, $single = FALSE){
 		
 		if ($id != NULL) {
