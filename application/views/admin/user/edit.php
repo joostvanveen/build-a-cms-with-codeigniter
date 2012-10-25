@@ -1,7 +1,4 @@
-<div class="modal-header">
-	<h3><?php echo empty($user->id) ? 'Add a new user' : 'Edit user ' . $user->name; ?></h3>
-</div>
-<div class="modal-body">
+<h3><?php echo empty($user->id) ? 'Add a new user' : 'Edit user ' . $user->name; ?></h3>
 <?php echo validation_errors(); ?>
 <?php echo form_open(); ?>
 <table class="table">
@@ -27,4 +24,3 @@
 	</tr>
 </table>
 <?php echo form_close();?>
-</div>
