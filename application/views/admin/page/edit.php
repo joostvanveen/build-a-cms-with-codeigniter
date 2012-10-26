@@ -3,6 +3,10 @@
 <?php echo form_open(); ?>
 <table class="table">
 	<tr>
+		<td>Parent</td>
+		<td><?php echo form_dropdown('parent_id', $pages_no_parents, $this->input->post('parent_id') ? $this->input->post('parent_id') : $page->parent_id); ?></td>
+	</tr>
+	<tr>
 		<td>Title</td>
 		<td><?php echo form_input('title', set_value('title', $page->title)); ?></td>
 	</tr>
