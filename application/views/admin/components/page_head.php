@@ -6,9 +6,11 @@
 	<!-- Bootstrap -->
 	<link href="<?php echo site_url('css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo site_url('css/admin.css'); ?>" rel="stylesheet">
+	<link href="<?php echo site_url('css/datepicker.css'); ?>" rel="stylesheet">
 		
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="<?php echo site_url('js/bootstrap.min.js'); ?>"></script>
+	<script src="<?php echo site_url('js/bootstrap-datepicker.js'); ?>"></script>
 	<?php if(isset($sortable) && $sortable === TRUE): ?>
 	<script src="<?php echo site_url('js/jquery-ui-1.9.1.custom.min.js'); ?>"></script>
 	<script src="<?php echo site_url('js/jquery.mjs.nestedSortable.js'); ?>"></script>
