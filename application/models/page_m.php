@@ -9,6 +9,11 @@ class Page_m extends MY_Model
 			'label' => 'Parent', 
 			'rules' => 'trim|intval'
 		), 
+		'template' => array(
+			'field' => 'template', 
+			'label' => 'Template', 
+			'rules' => 'trim|required|xss_clean'
+		), 
 		'title' => array(
 			'field' => 'title', 
 			'label' => 'Title', 
@@ -33,6 +38,7 @@ class Page_m extends MY_Model
 		$page->slug = '';
 		$page->body = '';
 		$page->parent_id = 0;
+		$page->template = 'page';
 		return $page;
 	}
 
