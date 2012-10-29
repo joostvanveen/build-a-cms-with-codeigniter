@@ -12,6 +12,40 @@ function btn_delete ($uri)
 	));
 }
 
+function e($string){
+	return htmlentities($string);
+}
+
+function get_menu ($array, $child = FALSE)
+{
+	$CI =& get_instance();
+	$str = '';
+	
+	if (count($array)) {
+		$str .= $child == FALSE ? '<ul class="nav">' . PHP_EOL : '<ul class="dropdown-menu">' . PHP_EOL;
+		
+		foreach ($array as $item) {
+			
+			$active = $CI->uri->segment(1) == $item['slug'] ? TRUE : FALSE;
+			if (isset($item['children']) && count($item['children'])) {
+				$str .= $active ? '<li class="dropdown active">' : '<li class="dropdown">';
+				$str .= '<a  class="dropdown-toggle" data-toggle="dropdown" href="' . site_url(e($item['slug'])) . '">' . e($item['title']);
+				$str .= '<b class="caret"></b></a>' . PHP_EOL;
+				$str .= get_menu($item['children'], TRUE);
+			}
+			else {
+				$str .= $active ? '<li class="active">' : '<li>';
+				$str .= '<a href="' . site_url($item['slug']) . '">' . e($item['title']) . '</a>';
+			}
+			$str .= '</li>' . PHP_EOL;
+		}
+		
+		$str .= '</ul>' . PHP_EOL;
+	}
+	
+	return $str;
+}
+
 /**
  * Dump helper. Functions to dump variables to the screen, in a nicley formatted manner.
  * @author Joost van Veen

@@ -10,16 +10,7 @@
 	 <div class="navbar">
 	 	<div class="navbar-inner">
 	 		<div class="container">
-	 			<ul class="nav">
-	 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Link<b class="caret"></b></a>
-	 					<ul class="dropdown-menu">
-	 						<li><a href="#">Link</a></li>
-	 						<li><a href="#">Link</a></li>
-	 					</ul>
-	 				</li>
-	 				<li><a href="#">Link</a></li>
-	 				<li><a href="#">Link</a></li>
-	 			</ul>
+<?php echo get_menu($menu); ?>
 	 		</div>
 	 	</div>
 	 </div>
