@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo config_item('site_name'); ?></title>
+	<title><?php echo $meta_title; ?></title>
 	<!-- Bootstrap -->
 	<link href="<?php echo site_url('css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo site_url('css/styles.css'); ?>" rel="stylesheet">

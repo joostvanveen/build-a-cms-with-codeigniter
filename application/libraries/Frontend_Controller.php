@@ -13,5 +13,6 @@ class Frontend_Controller extends MY_Controller
 		// Fetch navigation
 		$this->data['menu'] = $this->page_m->get_nested();
 		$this->data['news_archive_link'] = $this->page_m->get_archive_link();
+		$this->data['meta_title'] = config_item('site_name');
 	}
 }
