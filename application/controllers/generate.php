@@ -214,7 +214,7 @@ class Generate extends CI_Controller
 	private function _class_open ($name, $type = NULL, $extends = NULL)
 	{
 		$string = '';
-		$this->_php_open();
+		$string .= $this->_php_open();
 		$string .= "class " . ucfirst($name) . " ";
 		if ($extends === NULL && $type !== NULL) {
 			$string .= "extends CI_" . ucfirst(str_replace('Generate::', '', $type));
