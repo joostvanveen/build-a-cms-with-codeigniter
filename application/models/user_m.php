@@ -60,7 +60,11 @@ class User_M extends MY_Model
 				'loggedin' => TRUE,
 			);
 			$this->session->set_userdata($data);
+            return TRUE;
 		}
+
+        // If we get to here then login did not succeed
+        return FALSE;
 	}
 
 	public function logout ()
